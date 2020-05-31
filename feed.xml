@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0'>
+
+  <channel>
+    <title>CompareIt</title>
+    <link>localhost:5000</link>
+    <description>Main Page</description>
+    <language>ro-ro</language>
+
+    <item>
+      <title>Laptopuri actualizate EMAG</title>
+      <link>localhost:5000/produse/produse?categorie=calculatoare&amp;order=updated_desc</link>
+      <description>Prima pagina de la laptop-uri, ordonate dupa updated</description>
+      <pubDate>        <?php echo date()?></pubDate>
+    </item>
+
+    <item>
+      <title>Electrocasnice actualizate EMAG</title>
+      <link>localhost:5000/produse/produse?categorie=electrocasnice&amp;order=updated_desc</link>
+      <description>Prima pagina de la electrocasnice, ordonate dupa updated</description>
+      <pubDate>        <?php echo date()?></pubDate>
+    </item>
+
+    <item>
+      <title>Imbracaminte actualizata EMAG</title>
+      <link>localhost:5000/produse/produse?categorie=imbracaminte&amp;order=updated_desc</link>
+      <description>Prima pagina de la imbracaminte, ordonate dupa updated</description>
+      <pubDate>        <?php echo date()?></pubDate>
+    </item>
+
+    <item>
+      <title>Telefoane actualizate EMAG</title>
+      <link>localhost:5000/produse/produse?categorie=telefoane&amp;order=updated_desc</link>
+      <description>Prima pagina de la telefoane, ordonate dupa updated</description>
+      <pubDate>        <?php echo date()?></pubDate>
+    </item>
+
+  </channel>
+</rss>

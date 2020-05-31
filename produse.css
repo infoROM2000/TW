@@ -1,0 +1,697 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e0ac1c;
+}
+
+.purchase {
+  background: transparent;
+  border: none;
+  float: top;
+}
+
+.itemi {
+  padding: 1vh;
+}
+
+.item {
+  margin: auto;
+  width: 70%;
+  background-color: white;
+  padding: 3vh;
+  border-radius: 1vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.c {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+.c.cs {
+  text-align: left;
+  /*margin:auto;*/
+}
+
+.c.ct {
+  height: 50%;
+}
+
+.c.cp {
+  border: #747474;
+  float: center;
+  margin: 0 auto;
+}
+
+.ci {
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.extraspec {
+  text-align: center;
+}
+
+.item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #e0ac1c;
+  transition: all 0.5s ease;
+}
+
+.sidebar header {
+  font-size: 35px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #ebc660;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #5b460b;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+
+.sidebar ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  background: #e0ac1c;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+label #btn {
+  left: 40px;
+  top: 1px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+
+/*meniul de sus*/
+
+.nav-menu {
+  background: #2c292f;
+  height: 51.5px;
+  width: auto;
+}
+
+ul.nav-menu {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+ul.nav-menu li a {
+  float: right;
+  height: 50px;
+  line-height: 55px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-left: 1px #1d3030 solid;
+  width: 200px;
+  background: #2c292f;
+}
+
+ul.nav-menu li a:hover {
+  color: #92999f;
+  background: rgb(47, 79, 90);
+}
+
+#check:checked ~ section {
+  margin-left: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+  ul.nav-menu li a {
+    width: 70%;
+  }
+  .sidebar {
+    position: fixed;
+    left: -290px;
+    width: 50px;
+    height: 100%;
+    background: #e0ac1c;
+    transition: all 0.3s ease;
+  }
+  .sidebar header {
+    display: none;
+  }
+  .sidebar ul a {
+    height: 50%;
+    font-size: 15px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  ul.nav-menu {
+    padding-left: 250px;
+    padding-right: 0;
+    transition: all 0.3s ease;
+  }
+  ul.nav-menu li a {
+    border-bottom: 1px black solid;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    font-size: 17px;
+    transition: all 0.3s ease;
+  }
+}
+
+section {
+  background: linear-gradient(182deg, #2c292f, #e0ac1c);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+/*meniul de sus*/
+
+.nav-menu {
+  background: #2c292f;
+  height: 51.5px;
+  width: auto;
+}
+
+ul.nav-menu {
+  padding-left: 100px;
+  padding-right: 100px;
+  border-bottom: 1px black solid;
+}
+
+ul.nav-menu li a {
+  float: right;
+  height: 50px;
+  line-height: 55px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+  border-left: 1px #1d3030 solid;
+  width: 200px;
+}
+
+ul.nav-menu li a:hover {
+  color: #92999f;
+  background: rgb(47, 79, 90);
+}
+
+#check:checked ~ section {
+  margin-left: 250px;
+}
+
+.ordonari{
+  position: relative;
+  display: inline-block;
+}
+.ordonari a {
+  color: black;
+  padding:15px;
+  text-decoration: none;
+  display: block;
+}
+.ordonari .optiuni {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+    z-index: 1;
+}
+.ordonari button {
+  background-color: whitesmoke;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+}
+.ordonari:hover .optiuni{
+  display:block;
+}
+.ordonari a:hover{
+  background-color: #747474;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding-bottom: 200px;
+  padding-left: 5%;
+  padding-right: 5%;
+  column-gap: 5%;
+  row-gap: 50px;
+  grid-template-rows: 500px;
+}
+
+.grid-item {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid black;
+  --font-size: 30px;
+  text-align: center;
+  line-height: normal;
+}
+
+.grid-item .butoane {
+  display: inline-flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+.grid-item .butoane > button {
+  margin-top: 10px;
+  border: 2px outset orange;
+  background-color: whitesmoke;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.grid-item .butoane .refresh {
+  border-radius: 50%;
+}
+.grid-item .compara:hover {
+  background-color: orange;
+}
+
+.grid-item .refresh:hover {
+  background-color: orange;
+}
+
+.grid-item .tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-left: -120px;
+  border-radius: 20px;
+  padding: 5px;
+  bottom: 0; /*la nivelul patratului*/
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s; /*animatie aici + in hover*/
+}
+
+.grid-item .compara:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.grid-item .refresh:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.grid-item .titlu {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  text-justify: auto;
+}
+
+.grid-item .titlu:hover {
+  color: grey;
+}
+
+.grid-item img {
+  object-fit: contain;
+}
+
+.grid-item .review {
+  text-decoration: none;
+  color: darkblue;
+}
+.grid-item .review:hover {
+  color: blueviolet;
+}
+
+.grid-item .pret {
+  color: rgb(200, 100, 0);
+  font-size: 30px;
+}
+
+.grid-item .rating::before {
+  content: "★★★★★";
+  --width: calc(var(--rating) / 5 * 100%);
+  /*rating e intre 0 si 5, 20% reprezinta o stea*/
+  background: linear-gradient(
+    to right,
+    rgb(255, 251, 0) var(--width),
+    rgb(15, 15, 15) var(--width)
+  );
+  /* prima culoare e cea de umplere, a doua cea de fundal (rating 5=5 stele galbene)*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  font-size: calc(var(--font-size) * 2);
+  /*facem stelele duble fata de text*/
+}
+
+.grid-item .în-stoc {
+  color: green;
+}
+.grid-item .În-stoc {
+  color: green;
+}
+.grid-item .stoc-limitat {
+  color: yellow;
+}
+.grid-item .Stoc-limitat {
+  color: yellow;
+}
+.grid-item .ultimul {
+  color: red;
+}
+
+.collapsible {
+  background-color: #ddd;
+  padding: 20px;
+  width: 100%;
+  color: black;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.deschis,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: max-height 0.2s ease-out;
+}
+
+.filtre {
+  padding: 50px 5%;
+  max-width: 20%;
+}
+
+.filtre .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*The products table*/
+
+table {
+  border: 1px solid black;
+  border-spacing: 5px;
+  background-color: #2c292f;
+  color: #ebc660;
+  width: 70%;
+  margin-left: 40px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.cellWidth ul {
+  width: 350px;
+}
+
+.productImg img {
+  width: 330px;
+  height: 400px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  color: black;
+  background-color: #ebc660;
+}
+
+td:hover {
+  background-color: #e0ac1c;
+}
+
+/*Footer*/
+
+footer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+@media (max-height: 800px) {
+  footer {
+    position: static;
+  }
+  header {
+    padding-top: 40px;
+  }
+}
+
+.footer-distributed {
+  background-color: #2c292f;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 10px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Cookie", cursive;
+  margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img {
+  width: 30%;
+}
+
+.footer-distributed h3 span {
+  color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #e0ac1c;
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+
+/* You can remove below code if you don't want Footer to be responsive */
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
